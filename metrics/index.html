@@ -1,0 +1,461 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="icon" type="image/x-icon" href="https://assets-cdn.github.com/favicon.ico">
+  <link href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i" rel="stylesheet">
+  <link href="/assets/css/index.css" rel="stylesheet">
+  <!-- Begin Jekyll SEO tag v2.4.0 -->
+<title>Open Source Metrics | Open Source Guides</title>
+<meta name="generator" content="Jekyll v3.7.3">
+<meta property="og:title" content="Open Source Metrics">
+<meta property="og:locale" content="en">
+<meta name="description" content="Make informed decisions to help your open source project thrive by measuring and tracking its success.">
+<meta property="og:description" content="Make informed decisions to help your open source project thrive by measuring and tracking its success.">
+<link rel="canonical" href="http://localhost:4000/metrics/">
+<meta property="og:url" content="http://localhost:4000/metrics/">
+<meta property="og:site_name" content="Open Source Guides">
+<meta property="og:image" content="http://localhost:4000/assets/images/cards/metrics.png">
+<meta property="og:type" content="article">
+<meta property="article:published_time" content="2018-07-03T04:12:12+01:00">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:site" content="@github">
+<meta property="article:publisher" content="https://www.facebook.com/GitHub/">
+<script type="application/ld+json">
+{"description":"Make informed decisions to help your open source project thrive by measuring and tracking its success.","@type":"BlogPosting","url":"http://localhost:4000/metrics/","publisher":{"@type":"Organization","logo":{"@type":"ImageObject","url":"http://localhost:4000/assets/images/cards/default.png"}},"image":"http://localhost:4000/assets/images/cards/metrics.png","headline":"Open Source Metrics","dateModified":"2018-07-03T04:12:12+01:00","datePublished":"2018-07-03T04:12:12+01:00","mainEntityOfPage":{"@type":"WebPage","@id":"http://localhost:4000/metrics/"},"@context":"http://schema.org"}</script>
+<!-- End Jekyll SEO tag -->
+
+  
+    
+    
+      
+      
+      
+      
+      <link rel="alternate" hreflang="en" href="http://localhost:4000/metrics/">
+      <link rel="alternate" hreflang="x-default" href="http://localhost:4000/metrics/">
+      
+    
+      
+      
+      
+      
+      <link rel="alternate" hreflang="es" href="http://localhost:4000/es/metrics/">
+      
+    
+      
+      
+      
+      
+      <link rel="alternate" hreflang="id" href="http://localhost:4000/id/metrics/">
+      
+    
+      
+      
+      
+      
+      <link rel="alternate" hreflang="ko" href="http://localhost:4000/ko/metrics/">
+      
+    
+      
+      
+      
+      
+      <link rel="alternate" hreflang="zh-cn" href="http://localhost:4000/zh-cn/metrics/">
+      
+    
+  
+</head>
+
+  <body>
+    <main>
+      <div id="content">
+        
+
+<nav class="main-nav">
+  <div class="container-lg mx-auto clearfix">
+    <div class="float-sm-right">
+      <ul class="main-links d-flex flex-wrap flex-items-stretch border-left border-bottom border-sm-0 list-style-none">
+        <li class="d-inline-block border-right">
+          <a class="d-block p-3 p-sm-4" href="https://github.com/github/opensource.guide#readme">
+            About
+          </a>
+        </li>
+        <li class="d-inline-block border-right">
+          <a class="d-block p-3 p-sm-4" href="https://github.com/github/opensource.guide/blob/master/CONTRIBUTING.md">
+            Contribute
+          </a>
+        </li>
+      </ul>
+    </div>
+    
+    <div class="float-sm-left pl-3 breadcrumb">
+      <p class="my-0 py-3 py-sm-4 text-gray">
+        <a href="/" class="text-gray">Open Source Guides</a>
+      </p>
+    </div>
+    
+  </div>
+</nav>
+
+
+<header class="article-header metrics bg-gray-light">
+  <div class="container-lg p-responsive clearfix mx-auto">
+
+    <h1 class="alt-h1 lh-condensed text-center mb-3">Open Source Metrics</h1>
+    <p class="lead text-center text-gray col-md-8 mx-auto mb-4 position-relative">Make informed decisions to help your open source project thrive by measuring and tracking its success.</p>
+    <nav class="toc mb-4 mb-md-6">
+      <div class="card col-sm-8 col-md-4 col-lg-3 mx-auto">
+        <a class="toc-trigger d-block text-center p-3">
+          <span class="text-black">Table of Contents</span><svg height="18" class="octicon octicon-triangle-down ml-2 fill-blue v-align-middle icon-flip" viewbox="0 0 12 16" version="1.1" width="13" role="img"><path fill-rule="evenodd" d="M0 5l6 6 6-6z"></path></svg>
+        </a>
+        <ol class="toc-list list-style-none">
+          
+          <li class="border-top">
+            <a href="#why-measure-anything" class="d-block py-3 px-3">Why measure anything?</a>
+          </li>
+          
+          <li class="border-top">
+            <a href="#discovery" class="d-block py-3 px-3">Discovery</a>
+          </li>
+          
+          <li class="border-top">
+            <a href="#usage" class="d-block py-3 px-3">Usage</a>
+          </li>
+          
+          <li class="border-top">
+            <a href="#retention" class="d-block py-3 px-3">Retention</a>
+          </li>
+          
+          <li class="border-top">
+            <a href="#maintainer-activity" class="d-block py-3 px-3">Maintainer activity</a>
+          </li>
+          
+        </ol>
+      </div>
+    </nav>
+    <div class="col-sm-10 mx-auto lh-none cover-img">
+      <img src="/assets/images/illos/metrics.svg" alt="Open Source Metrics">
+    </div>
+  </div>
+</header>
+
+<article class="pb-md-6">
+  <div class="article-body mx-auto px-3 pt-4 pt-lg-6 pb-6 col-md-10 col-lg-8 col-xl-6">
+    <h2 id="why-measure-anything">Why measure anything?</h2>
+
+<p>Data, when used wisely, can help you make better decisions as an open source maintainer.</p>
+
+<p>With more information, you can:</p>
+
+<ul>
+  <li>Understand how users respond to a new feature</li>
+  <li>Figure out where new users come from</li>
+  <li>Identify, and decide whether to support, an outlier use case or functionality</li>
+  <li>Quantify your project’s popularity</li>
+  <li>Understand how your project is used</li>
+  <li>Raise money through sponsorships and grants</li>
+</ul>
+
+<p>For example, <a href="https://github.com/Homebrew/brew/blob/bbed7246bc5c5b7acb8c1d427d10b43e090dfd39/docs/Analytics.md">Homebrew</a> finds that Google Analytics helps them prioritize work:</p>
+
+<blockquote>
+  <p>Homebrew is provided free of charge and run entirely by volunteers in their spare time. As a result, we do not have the resources to do detailed user studies of Homebrew users to decide on how best to design future features and prioritise current work. Anonymous aggregate user analytics allow us to prioritise fixes and features based on how, where and when people use Homebrew.</p>
+</blockquote>
+
+<p>Popularity isn’t everything. Everybody gets into open source for different reasons. If your goal as an open source maintainer is to show off your work, be transparent about your code, or just have fun, metrics may not be important to you.</p>
+
+<p>If you <em>are</em> interested in understanding your project on a deeper level, read on for ways to analyze your project’s activity.</p>
+
+<h2 id="discovery">Discovery</h2>
+
+<p>Before anybody can use or contribute back to your project, they need to know it exists. Ask yourself: <em>are people finding this project?</em></p>
+
+<p><img src="/assets/images/metrics/repo_traffic_graphs_tooltip.png" alt="Traffic graph"></p>
+
+<p>If your project is hosted on GitHub, <a href="https://help.github.com/articles/about-repository-graphs/#traffic">you can view</a> how many people land on your project and where they come from. From your project’s page, click “Insights”, then “Traffic”. On this page, you can see:</p>
+
+<ul>
+  <li>
+    <p><strong>Total page views:</strong> Tells you how many times your project was viewed</p>
+  </li>
+  <li>
+    <p><strong>Total unique visitors:</strong> Tells you how many people viewed your project</p>
+  </li>
+  <li>
+    <p><strong>Referring sites:</strong> Tells you where visitors came from. This metric can help you figure out where to reach your audience and whether your promotion efforts are working.</p>
+  </li>
+  <li>
+    <p><strong>Popular content:</strong> Tells you where visitors go on your project, broken down by page views and unique visitors.</p>
+  </li>
+</ul>
+
+<p><a href="https://help.github.com/articles/about-stars/">GitHub stars</a> can also help provide a baseline measure of popularity. While GitHub stars don’t necessarily correlate to downloads and usage, they can tell you how many people are taking notice of your work.</p>
+
+<p>You may also want to <a href="https://opensource.com/business/16/6/pirate-metrics">track discoverability in specific places</a>: for example, Google PageRank, referral traffic from your project’s website, or referrals from other open source projects or websites.</p>
+
+<h2 id="usage">Usage</h2>
+
+<p>People are finding your project on this wild and crazy thing we call the internet. Ideally, when they see your project, they’ll feel compelled to do something. The second question you’ll want to ask is: <em>are people using this project?</em></p>
+
+<p>If you use a package manager, such as npm or RubyGems.org, to distribute your project, you may be able to track your project’s downloads.</p>
+
+<p>Each package manager may use a slightly different definition of “download”, and downloads do not necessarily correlate to installs or use, but it provides some baseline for comparison. Try using <a href="https://libraries.io/">Libraries.io</a> to track usage statistics across many popular package managers.</p>
+
+<p>If your project is on GitHub, navigate again to the “Traffic” page. You can use the <a href="https://github.com/blog/1873-clone-graphs">clone graph</a> to see how many times your project has been cloned on a given day, broken down by total clones and unique cloners.</p>
+
+<p><img src="/assets/images/metrics/clone_graph.png" alt="Clone graph"></p>
+
+<p>If usage is low compared to the number of people discovering your project, there are two issues to consider. Either:</p>
+
+<ul>
+  <li>Your project isn’t successfully converting your audience, or</li>
+  <li>You’re attracting the wrong audience</li>
+</ul>
+
+<p>For example, if your project lands on the front page of Hacker News, you’ll probably see a spike in discovery (traffic), but a lower conversion rate, because you’re reaching everyone on Hacker News. If your Ruby project is featured at a Ruby conference, however, you’re more likely to see a high conversion rate from a targeted audience.</p>
+
+<p>Try to figure out where your audience is coming from and ask others for feedback on your project page to figure out which of these two issues you’re facing.</p>
+
+<p>Once you know that people are using your project, you might want to try to figure out what they are doing with it. Are they building on it by forking your code and adding features? Are they using it for science or business?</p>
+
+<h2 id="retention">Retention</h2>
+
+<p>People are finding your project and they’re using it. The next question you’ll want to ask yourself is: <em>are people contributing back to this project?</em></p>
+
+<p>It’s never too early to start thinking about contributors. Without other people pitching in, you risk putting yourself into an unhealthy situation where your project is <em>popular</em> (many people use it) but not <em>supported</em> (not enough maintainer time to meet demand).</p>
+
+<p>Retention also requires an <a href="http://blog.abigailcabunoc.com/increasing-developer-engagement-at-mozilla-science-learning-advocacy#contributor-pathways_2">inflow of new contributors</a>, as previously active contributors will eventually move on to other things.</p>
+
+<p>Examples of community metrics that you may want to regularly track include:</p>
+
+<ul>
+  <li>
+<strong>Total contributor count and number of commits per contributor:</strong> Tells you how many contributors you have, and who’s more or less active. On GitHub, you can view this under “Insights” -&gt; “Contributors.” Right now, this graph only counts contributors who have committed to the default branch of the repository.</li>
+</ul>
+
+<p><img src="/assets/images/metrics/repo_contributors_specific_graph.png" alt="Contributor graph"></p>
+
+<ul>
+  <li>
+    <p><strong>First time, casual, and repeat contributors:</strong> Helps you track whether you’re getting new contributors, and whether they come back. (Casual contributors are contributors with a low number of commits. Whether that’s one commit, less than five commits, or something else is up to you.) Without new contributors, your project’s community can become stagnant.</p>
+  </li>
+  <li>
+    <p><strong>Number of open issues and open pull requests:</strong> If these numbers get too high, you might need help with issue triaging and code reviews.</p>
+  </li>
+  <li>
+    <p><strong>Number of <em>opened</em> issues and <em>opened</em> pull requests:</strong> Opened issues means somebody cares enough about your project to open an issue. If that number increases over time, it suggests people are interested in your project.</p>
+  </li>
+  <li>
+    <p><strong>Types of contributions:</strong> For example, commits, fixing typos or bugs, or commenting on an issue.</p>
+  </li>
+</ul>
+
+<aside class="pquote">
+  <p><img src="https://avatars.githubusercontent.com/arfon?s=180" class="pquote-avatar" alt="avatar">
+  Open source is more than just code. Successful open source projects include code and documentation contributions together with conversations about these changes.</p>
+  <p class="pquote-credit">
+— <a href="https://github.com/arfon" class="user-mention">@arfon</a>, <a href="https://github.com/blog/2195-the-shape-of-open-source">“The Shape of Open Source”</a>
+  </p>
+</aside>
+
+<h2 id="maintainer-activity">Maintainer activity</h2>
+
+<p>Finally, you’ll want to close the loop by making sure your project’s maintainers are able to handle the volume of contributions received. The last question you’ll want to ask yourself is: <em>am I (or are we) responding to our community?</em></p>
+
+<p>Unresponsive maintainers become a bottleneck for open source projects. If someone submits a contribution but never hears back from a maintainer, they may feel discouraged and leave.</p>
+
+<p><a href="https://docs.google.com/presentation/d/1hsJLv1ieSqtXBzd5YZusY-mB8e1VJzaeOmh8Q4VeMio/edit#slide=id.g43d857af8_0177">Research from Mozilla</a> suggests that maintainer responsiveness is a critical factor in encouraging repeat contributions.</p>
+
+<p>Consider tracking how long it takes for you (or another maintainer) to respond to contributions, whether an issue or a pull request. Responding doesn’t require taking action. It can be as simple as saying: <em>“Thanks for your submission! I’ll review this within the next week.”</em></p>
+
+<p>You could also measure the time it takes to move between stages in the contribution process, such as:</p>
+
+<ul>
+  <li>Average time an issue remains open</li>
+  <li>Whether issues get closed by PRs</li>
+  <li>Whether stale issues get closed</li>
+  <li>Average time to merge a pull request</li>
+</ul>
+
+<h2 id="use--to-learn-about-people">Use 📊 to learn about people</h2>
+
+<p>Understanding metrics will help you build an active, growing open source project. Even if you don’t track every metric on a dashboard, use the framework above to focus your attention on the type of behavior that will help your project thrive.</p>
+
+  </div>
+  <div class="text-center pb-4">
+    <a class="alt-h3" href="/">
+      Back to all guides
+    </a>
+  </div>
+</article>
+
+
+<div class="container-lg p-responsive mx-auto border-top text-center pt-5">
+  <h2 class="alt-h2">Related Guides</h2>
+  <div class="gutter-sm d-flex flex-wrap flex-items-stretch pb-md-6">
+  
+    
+    <div class="col-12 col-sm-9 mx-auto col-md-6 mt-4 mt-lg-5">
+      <a href="/finding-users/" class="guide-cover finding card height-full d-block">
+
+        <div class="lh-none guide-cover-img text-center pt-4">
+          <img src="/assets/images/illos/finding.svg" class="" alt="Finding Users for Your Project illustration">
+        </div>
+
+        <div class="flex-self-end p-4 text-center p-lg-5">
+          <h3 class="alt-h3 text-bold lh-condensed mb-2 text-black">
+            Finding Users for Your Project
+          </h3>
+          <div class="mb-0 text-gray">
+            <p>Help your open source project grow by getting it in the hands of happy users.</p>
+
+          </div>
+        </div>
+
+      </a>
+    </div>
+  
+    
+    <div class="col-12 col-sm-9 mx-auto col-md-6 mt-4 mt-lg-5">
+      <a href="/best-practices/" class="guide-cover best-practices card height-full d-block">
+
+        <div class="lh-none guide-cover-img text-center pt-4">
+          <img src="/assets/images/illos/best-practices.svg" class="" alt="Best Practices for Maintainers illustration">
+        </div>
+
+        <div class="flex-self-end p-4 text-center p-lg-5">
+          <h3 class="alt-h3 text-bold lh-condensed mb-2 text-black">
+            Best Practices for Maintainers
+          </h3>
+          <div class="mb-0 text-gray">
+            <p>Making your life easier as an open source maintainer, from documenting processes to leveraging your community.</p>
+
+          </div>
+        </div>
+
+      </a>
+    </div>
+  
+  </div>
+</div>
+
+
+
+<footer class="bg-white border-top text-center pt-5">
+  <div class="container-lg p-responsive mx-auto">
+
+    <div class="d-flex flex-wrap flex-items-stretch">
+      <div class="col-12 col-sm-6 mb-4 col-border">
+        <div class="height-full p-5">
+          <img src="/assets/images/illos/squirrel.svg" class="little-illo mb-3" alt="squirrel illustration">
+          <h3 class="alt-h3 mb-3">Contribute</h3>
+          <p class="mb-3 p-large">Want to make a suggestion? This content is open source. Help us improve it.</p>
+          <p>
+            <a data-proofer-ignore href="https://github.com//edit/master/_articles/metrics.md" class="btn btn-outline">
+              Contribute
+            </a>
+          </p>
+        </div>
+      </div>
+      <div class="col-12 col-sm-6 mb-4">
+        <div class="height-full p-5">
+          <div id="mc_embed_signup">
+          <form action="//github.us11.list-manage.com/subscribe/post?u=9d7ced8c4bbd6c2f238673f0f&amp;id=b514344ba3" method="post" id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form" class="validate" target="_blank" novalidate>
+              <div id="mc_embed_signup_scroll">
+              <img src="/assets/images/illos/bird.svg" class="little-illo mb-3" alt="bird illustration">
+              <h3 class="alt-h3 mb-3">Stay in touch</h3>
+              <p class="mb-3 p-large">Be the first to hear about GitHub's latest open source tips and resources.</p>
+
+              <div class="mc-field-group col-12">
+                  <label for="mce-EMAIL" class="d-none">Email Address</label>
+                  <input type="email" placeholder="Email Address" name="EMAIL" class="form-input required email d-block col-10 mx-auto py-2 px-3 mb-3" id="mce-EMAIL" autocomplete="home email">
+                  <input type="checkbox" value="1" name="group[9617][1]" id="mce-group[9617]-9617-0" checked style="display:none">
+                  <input type="submit" value="Subscribe" name="subscribe" id="mc-embedded-subscribe" class="btn btn-outline">
+              </div>
+              <div id="mce-responses" class="clear">
+                  <div class="" id="mce-error-response" style="display:none"></div>
+                  <div class="" id="mce-success-response" style="display:none"></div>
+              </div>
+              <div style="position: absolute; left: -5000px;" aria-hidden="true"><input type="text" name="b_9d7ced8c4bbd6c2f238673f0f_b514344ba3" tabindex="-1" value=""></div>
+              </div>
+          </form>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="border-top text-gray py-5">
+      
+      <select id="language" class="float-md-left">
+        
+        
+          
+          
+          
+          <option value="en" selected>English</option>
+          
+        
+          
+          
+          
+          <option value="es">Español</option>
+          
+        
+          
+          
+          
+          <option value="id">Indonesia</option>
+          
+        
+          
+          
+          
+          <option value="ko">한국어</option>
+          
+        
+          
+          
+          
+          <option value="zh-cn">简体中文</option>
+          
+        
+      </select>
+      
+      <p class="float-md-right"><a class="text-gray-light text-small" href="/notices/">fine print</a></p>
+
+      <div>
+        
+        
+        
+        
+
+        
+        
+          
+          <svg height="20" class="octicon octicon-code v-align-middle fill-gray mr-1" aria-label="code" viewbox="0 0 14 16" version="1.1" width="17" role="img"><path d="M9.5 3L8 4.5 11.5 8 8 11.5 9.5 13 14 8 9.5 3zm-5 0L0 8l4.5 5L6 11.5 2.5 8 6 4.5 4.5 3z"></path></svg>
+         with 
+          
+          <svg height="20" class="octicon octicon-heart v-align-middle fill-gray mx-1" aria-label="love" viewbox="0 0 12 16" version="1.1" width="15" role="img"><path d="M11.2 3c-.52-.63-1.25-.95-2.2-1-.97 0-1.69.42-2.2 1-.51.58-.78.92-.8 1-.02-.08-.28-.42-.8-1-.52-.58-1.17-1-2.2-1-.95.05-1.69.38-2.2 1-.52.61-.78 1.28-.8 2 0 .52.09 1.52.67 2.67C1.25 8.82 3.01 10.61 6 13c2.98-2.39 4.77-4.17 5.34-5.33C11.91 6.51 12 5.5 12 5c-.02-.72-.28-1.39-.8-2.02V3z"></path></svg>
+         by 
+          <svg height="20" class="octicon octicon-mark-github v-align-middle fill-gray mx-1" aria-label="GitHub" viewbox="0 0 16 16" version="1.1" width="20" role="img"><path d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27.68 0 1.36.09 2 .27 1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.013 8.013 0 0 0 16 8c0-4.42-3.58-8-8-8z"></path></svg>
+         and 
+          
+          <a href="https://github.com/github/opensource.guide/graphs/contributors" class="text-gray">friends</a>
+        
+      </div>
+    </div>
+  </div>
+</footer>
+
+
+      </div>
+    </main>
+
+    <script src="/assets/js/index.js"></script>
+    <script type="text/javascript" src="//s3.amazonaws.com/downloads.mailchimp.com/js/mc-validate.js"></script>
+    <script type="text/javascript">(function($) {window.fnames = new Array(); window.ftypes = new Array();fnames[0]='EMAIL';ftypes[0]='email';fnames[1]='FNAME';ftypes[1]='text';fnames[2]='LNAME';ftypes[2]='text';}(jQuery));var $mcj = jQuery.noConflict(true);</script>
+  </body>
+</html>
